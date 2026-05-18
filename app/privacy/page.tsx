@@ -1,5 +1,4 @@
-// TODO: Legal copy below is a reasonable placeholder for App Store submission.
-// Confirm the operating entity name and contact addresses with legal before launch.
+// Entity (Smarter Foundry LLC) and contact addresses are confirmed current.
 import { Footer } from '@/components/landing/footer'
 
 export const metadata = {
@@ -93,15 +92,21 @@ export default function PrivacyPage() {
 
             <SubSection title="b. Health and Fitness Data">
               <p>
-                With your permission, SmarterTraining may access fitness and
-                activity data — such as workouts, heart rate, or training
-                history — from your device or connected services in order to
-                generate and adapt your training recommendations.
+                With your permission, SmarterTraining may access health and
+                fitness data — such as workouts, heart rate, or activity history
+                — from Apple HealthKit, connected heart rate monitors, or other
+                connected fitness services. We use this data to generate
+                adaptive recommendations and workout planning,
+                and to improve the Service.
               </p>
               <p>
-                Health and fitness data is used only to provide and improve the
-                Service. We do not sell this data, and we do not use it for
-                advertising.
+                HealthKit and connected fitness data is used solely to provide
+                and improve the Service. It is never sold, never shared with
+                advertisers, and never used for advertising purposes.
+              </p>
+              <p>
+                You can revoke HealthKit access at any time through the Settings
+                app on your device.
               </p>
             </SubSection>
 
@@ -146,20 +151,47 @@ export default function PrivacyPage() {
                 'Detect, prevent, or address technical issues and abuse of the Service',
               ]}
             />
+            <p>
+              Some recommendations are generated or adapted using automated
+              systems and algorithmic processing, based on the information you
+              provide and other data available to the Service.
+            </p>
           </Section>
 
           <Section title="3. Analytics and Third-Party Services">
             <p>
-              We use third-party services to help operate and improve the
-              Service. These services may process data on our behalf and
-              operate under their own privacy policies. These may include
-              analytics providers, AI and processing services used to generate
-              and adapt recommendations, and cloud infrastructure and hosting
-              providers.
+              We use a small number of third-party services to help operate and
+              improve the Service. These may include:
+            </p>
+            <List
+              items={[
+                'Analytics providers',
+                'Cloud hosting and infrastructure',
+                'Crash reporting and diagnostics',
+                'AI and processing infrastructure used to generate and adapt recommendations',
+              ]}
+            />
+            <p>
+              These providers process data on our behalf, only as needed to
+              perform their function, and operate under their own privacy
+              policies.
+            </p>
+            <p>
+              Because these providers operate in different locations, your data
+              may be processed and stored in the United States or other
+              jurisdictions where our service providers operate.
             </p>
           </Section>
 
-          <Section title="4. Data Retention">
+          <Section title="4. We Do Not Sell Your Data">
+            <p>
+              SmarterTraining does not sell your personal information or your
+              health and fitness data. We also do not share this data with
+              advertisers or use it for advertising.
+            </p>
+          </Section>
+
+          <Section title="5. Data Retention">
             <p>We retain your data only as long as necessary to:</p>
             <List
               items={[
@@ -171,7 +203,7 @@ export default function PrivacyPage() {
             />
           </Section>
 
-          <Section title="5. Data Security">
+          <Section title="6. Data Security">
             <p>
               We use reasonable safeguards to protect your information,
               including secure transmission over HTTPS. However, no method of
@@ -180,7 +212,7 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
-          <Section title="6. Children’s Privacy">
+          <Section title="7. Children’s Privacy">
             <p>
               SmarterTraining is not intended for children under the age of 13,
               and we do not knowingly collect personal information from
@@ -188,24 +220,26 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
-          <Section title="7. Your Rights and Choices">
+          <Section title="8. Your Rights and Choices">
             <p>
-              You may request deletion of your data at any time. You can also
-              revoke health and fitness data permissions through your device
-              settings at any time.
-            </p>
-            <p>
-              Contact:{' '}
+              You may request deletion of your app data at any time — within
+              the App, or by contacting{' '}
               <a
-                href="mailto:hello@smartertraining.ai"
+                href="mailto:privacy@smartertraining.ai"
                 className="text-blue-600 underline"
               >
-                hello@smartertraining.ai
+                privacy@smartertraining.ai
               </a>
+              . We will delete your data, though some limited information may be
+              retained where required by law.
+            </p>
+            <p>
+              You can also revoke health, fitness, or HealthKit permissions at
+              any time through your device settings.
             </p>
           </Section>
 
-          <Section title="8. Changes to This Privacy Policy">
+          <Section title="9. Changes to This Privacy Policy">
             <p>
               We may update this Privacy Policy from time to time. If we make
               material changes, we will update the Effective Date above.
@@ -214,26 +248,26 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
-          <Section title="9. Contact Us">
+          <Section title="10. Contact Us">
             <p>
               Email:{' '}
               <a
-                href="mailto:hello@smartertraining.ai"
+                href="mailto:privacy@smartertraining.ai"
                 className="text-blue-600 underline"
               >
-                hello@smartertraining.ai
+                privacy@smartertraining.ai
               </a>
             </p>
             <p>Company: Smarter Foundry LLC</p>
             <p>Website: smartertraining.ai</p>
           </Section>
 
-          <Section title="10. Health and Fitness Disclaimer">
+          <Section title="11. Health and Fitness Disclaimer">
             <p>
-              SmarterTraining provides informational training recommendations,
-              workout suggestions, and adaptive coaching only. The Service is
-              not a medical service and does not provide medical advice,
-              diagnosis, or treatment.
+              SmarterTraining provides informational training guidance, workout
+              planning, and adaptive recommendations only. The Service is not a
+              medical service and does not provide medical advice, diagnosis, or
+              treatment.
             </p>
             <p>
               You should consult a qualified healthcare professional before
