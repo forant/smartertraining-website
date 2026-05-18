@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/timforan/Developer/smartereats-website/**)",
+      "Read(//Users/timforan/Developer/**)",
+      "Bash(mkdir -p app/privacy app/terms components/landing lib functions/api public/images)",
+      "Bash(cp /Users/timforan/Developer/smartertraining/SmarterTraining/Assets.xcassets/AppLogo.imageset/AppLogo.png public/logo-mark.png)",
+      "Bash(cp /Users/timforan/Developer/smartertraining/SmarterTraining/Assets.xcassets/AppLogo.imageset/AppLogo.png public/icon-32.png)",
+      "Bash(cp /Users/timforan/Developer/smartertraining/SmarterTraining/Assets.xcassets/AppLogo.imageset/AppLogo.png public/apple-icon.png)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm dev *)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(curl -s -o /dev/null http://localhost:3000)",
+      "Bash(break)"
+    ]
+  }
+}

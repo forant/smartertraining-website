@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+/*
+ * SmarterTraining design tokens.
+ * Brand: navy "speedometer" mark with an amber needle.
+ *   - foreground / surfaces: calm navy-tinted neutrals
+ *   - primary CTA: confident indigo-blue
+ *   - accent: amber, used sparingly for brand highlights
+ */
+:root {
+  /* Backgrounds */
+  --background: #F7F8FA;
+  --surface: #FFFFFF;
+  --surface-light: #EEF0F4;
+
+  /* Text */
+  --foreground: #18202E;
+  --muted-foreground: #5B6472;
+
+  /* Brand */
+  --primary: #3B5BDB;
+  --primary-foreground: #FFFFFF;
+  --accent: #E8A33D;
+  --accent-foreground: #18202E;
+
+  /* Lines / inputs */
+  --border: #E4E7EC;
+  --input: #E4E7EC;
+  --ring: #3B5BDB;
+  --destructive: #EF4444;
+
+  /* shadcn-style aliases (kept for component parity with SmarterEats) */
+  --card: #FFFFFF;
+  --card-foreground: #18202E;
+  --secondary: #EEF0F4;
+  --secondary-foreground: #374151;
+  --muted: #EEF0F4;
+
+  /* Cards use a 14px radius */
+  --radius: 0.875rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+
+  /* Map CSS variables to Tailwind color utilities */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
