@@ -9,19 +9,12 @@
  *
  * Adapted from the SmarterEats waitlist function.
  *
- * TODO (one-time setup before this works in production):
- *   1. Workers & Pages → KV → Create namespace → name it
- *      "smartertraining_waitlist" (the binding name below is what matters).
- *   2. Pages project → Settings → Functions → KV namespace bindings →
- *      Add: Variable name = "WAITLIST", KV namespace = the one you created.
- *   3. Redeploy.
- *
- * Until the binding exists, the form will show a clean "Server misconfigured"
- * error. Local `next dev` does not run this function — see the form's stub
- * note below.
+ * Production setup is complete: the `WAITLIST` KV namespace is created and
+ * bound to the Pages project. Note that this function does NOT run under local
+ * `next dev` — test it on a Cloudflare Pages deploy.
  *
  * To export signups later:
- *   wrangler kv:key list --namespace-id <ID>
+ *   wrangler kv key list --namespace-id <ID>
  */
 
 interface Env {

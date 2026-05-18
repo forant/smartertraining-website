@@ -1,19 +1,31 @@
 import Image from 'next/image'
 
-// TODO: Swap these placeholder SVGs for real App Store screenshots.
-// Keep the same ~320x694 aspect ratio so the phone frame stays correct.
+// Real App Store screenshots. The set walks through the daily loop:
+// check in → share real-life context → get a plan that fits.
 const screenshots = [
   {
-    src: '/images/screenshot-1.svg',
-    alt: "Today's workout: a recommended endurance ride sized to your day",
+    src: '/images/screen-checkin.png',
+    width: 820,
+    height: 1777,
+    caption: 'Check in',
+    description: 'A quick daily check-in — how you feel, your legs, your energy.',
+    alt: "SmarterTraining check-in asking how you feel today, with Great, Good, Okay, and Bad options",
   },
   {
-    src: '/images/screenshot-2.svg',
-    alt: 'Daily check-in: energy, soreness, and available time',
+    src: '/images/screen-real-life.png',
+    width: 820,
+    height: 1782,
+    caption: 'Add real-life context',
+    description: 'Poor sleep, work stress, travel — the stuff that actually affects recovery.',
+    alt: "SmarterTraining asking how life outside training is going, with options like poor sleep, work stress, travel, and sore legs",
   },
   {
-    src: '/images/screenshot-3.svg',
-    alt: 'Adaptive plan: this week adjusted after a missed session',
+    src: '/images/screen-adapts.png',
+    width: 820,
+    height: 1777,
+    caption: 'Get a plan that fits',
+    description: 'Your workout adjusts to the day — and to what is coming up next.',
+    alt: "SmarterTraining today view showing workout feedback and upcoming travel that the plan adapts around",
   },
 ]
 
@@ -34,23 +46,31 @@ export function Screenshots() {
   return (
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-6 max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16 tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 tracking-tight">
           See it in action
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
+          A 30-second check-in is all it takes to get the right workout for
+          today.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           {screenshots.map((screenshot, index) => (
-            <div key={index} className="flex justify-center">
+            <div key={index} className="flex flex-col items-center">
               <div className="w-56 md:w-64">
                 <PhoneFrame>
                   <Image
                     src={screenshot.src}
                     alt={screenshot.alt}
-                    width={320}
-                    height={694}
+                    width={screenshot.width}
+                    height={screenshot.height}
                     className="w-full h-auto"
                   />
                 </PhoneFrame>
               </div>
+              <h3 className="mt-8 text-lg font-medium">{screenshot.caption}</h3>
+              <p className="mt-1.5 text-sm text-muted-foreground text-center max-w-[16rem] leading-relaxed">
+                {screenshot.description}
+              </p>
             </div>
           ))}
         </div>

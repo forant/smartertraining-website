@@ -59,10 +59,10 @@ export function Hero() {
             <div className="relative w-64 md:w-72 lg:w-80">
               <PhoneFrame>
                 <Image
-                  src="/images/hero-phone.svg"
-                  alt="SmarterTraining app — today's recommended workout"
-                  width={320}
-                  height={694}
+                  src="/images/screen-today.png"
+                  alt="SmarterTraining app showing today's recommended workout — a 60-minute endurance ride that fits your day"
+                  width={820}
+                  height={1777}
                   className="w-full h-auto"
                   priority
                 />

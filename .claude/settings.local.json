@@ -14,7 +14,9 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(pkill -f \"next-server\")",
       "Bash(curl -s -o /dev/null http://localhost:3000)",
-      "Bash(break)"
+      "Bash(break)",
+      "Bash(ls -la ~/Downloads/screenshots/)",
+      "Read(//Users/timforan/Downloads/screenshots/**)"
     ]
   }
 }

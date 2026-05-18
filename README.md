@@ -37,7 +37,7 @@ app/
 components/landing/    Header, Hero, HowItWorks, Screenshots,
                        WhyDifferent, CTA, Footer, WaitlistForm
 functions/api/         Cloudflare Pages Function for the waitlist
-public/images/         Placeholder app screenshots (SVG)
+public/images/         App screenshots (PNG)
 ```
 
 ## Waitlist
@@ -46,16 +46,14 @@ The waitlist form (`components/landing/waitlist-form.tsx`) POSTs to
 `/api/waitlist`, handled by the Cloudflare Pages Function in
 `functions/api/waitlist.ts`. It stores emails in a KV namespace.
 
-**Setup required before production** — see the TODO block at the top of
-`functions/api/waitlist.ts` (create a KV namespace and bind it as `WAITLIST`).
-Note: the function does **not** run under local `pnpm dev`; test it on a
-Cloudflare Pages preview deploy.
+The `WAITLIST` KV namespace is created and bound to the Pages project, so the
+form works in production. Note: the function does **not** run under local
+`pnpm dev`; test it on a Cloudflare Pages deploy.
 
-## TODOs before launch
+## Updating screenshots
 
-- [ ] Replace placeholder SVG screenshots in `public/images/` with real App
-      Store screenshots (keep the ~320×694 aspect ratio).
-- [ ] Create the Cloudflare KV namespace and `WAITLIST` binding.
-- [ ] Confirm legal entity name, contact email, and governing law in
-      `app/privacy/page.tsx` and `app/terms/page.tsx` (currently placeholders).
-- [ ] Confirm the `hello@smartertraining.ai` address / domain is live.
+App screenshots live in `public/images/` (`screen-*.png`) and are referenced
+by `components/landing/hero.tsx` and `components/landing/screenshots.tsx`. To
+swap one, resize the new image to ~820px wide (`sips --resampleWidth 820 …`)
+and keep the same filename, or update the `src` / `width` / `height` in those
+components.
