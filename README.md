@@ -58,4 +58,4 @@ Cloudflare Pages preview deploy.
 - [ ] Create the Cloudflare KV namespace and `WAITLIST` binding.
 - [ ] Confirm legal entity name, contact email, and governing law in
       `app/privacy/page.tsx` and `app/terms/page.tsx` (currently placeholders).
-- [ ] Confirm the `hello@smartertraining.app` address / domain is live.
+- [ ] Confirm the `hello@smartertraining.ai` address / domain is live.

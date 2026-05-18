@@ -197,10 +197,10 @@ export default function PrivacyPage() {
             <p>
               Contact:{' '}
               <a
-                href="mailto:hello@smartertraining.app"
+                href="mailto:hello@smartertraining.ai"
                 className="text-blue-600 underline"
               >
-                hello@smartertraining.app
+                hello@smartertraining.ai
               </a>
             </p>
           </Section>
@@ -218,14 +218,14 @@ export default function PrivacyPage() {
             <p>
               Email:{' '}
               <a
-                href="mailto:hello@smartertraining.app"
+                href="mailto:hello@smartertraining.ai"
                 className="text-blue-600 underline"
               >
-                hello@smartertraining.app
+                hello@smartertraining.ai
               </a>
             </p>
             <p>Company: Smarter Foundry LLC</p>
-            <p>Website: smartertraining.app</p>
+            <p>Website: smartertraining.ai</p>
           </Section>
 
           <Section title="10. Health and Fitness Disclaimer">

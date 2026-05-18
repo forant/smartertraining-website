@@ -194,9 +194,9 @@ export default function TermsPage() {
           <Section title="13. Contact Us">
             <p>If you have any questions about these Terms, please contact us at:</p>
             <p>
-              Email: hello@smartertraining.app
+              Email: hello@smartertraining.ai
               <br />
-              Website: smartertraining.app
+              Website: smartertraining.ai
             </p>
           </Section>
         </div>

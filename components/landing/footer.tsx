@@ -8,10 +8,10 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a
-              href="mailto:hello@smartertraining.app"
+              href="mailto:hello@smartertraining.ai"
               className="hover:text-foreground transition-colors"
             >
-              hello@smartertraining.app
+              hello@smartertraining.ai
             </a>
             <a href="/privacy" className="hover:text-foreground transition-colors">
               Privacy Policy
