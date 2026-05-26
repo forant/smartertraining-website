@@ -13,8 +13,13 @@
 import type { ComponentType } from 'react'
 import type { PostMeta } from '@/lib/blog/types'
 
+import * as cyclingTrainingForParentsWithLimitedTimePost from './cycling-training-for-parents-with-limited-time'
+import * as howToTrainWhenYourScheduleChangesEveryWeekPost from './how-to-train-when-your-schedule-changes-every-week'
+import * as shouldITrainWhenMyLegsStillFeelHeavyPost from './should-i-train-when-my-legs-still-feel-heavy'
 import * as welcomeToTheSmartertrainingBlogPost from './welcome-to-the-smartertraining-blog'
 import * as whyAmIExhaustedAfterZone2RidesPost from './why-am-i-exhausted-after-zone-2-rides'
+import * as whyConsistencyBeatsPerfectTrainingWeeksPost from './why-consistency-beats-perfect-training-weeks'
+import * as whyRecoveryRecommendationsMatterMoreThanPerfectWorkoutsPost from './why-recovery-recommendations-matter-more-than-perfect-workouts'
 import * as whyStaticCyclingPlansFailBusyAthletesPost from './why-static-cycling-plans-fail-busy-athletes'
 
 export interface RegisteredPost {
@@ -23,7 +28,12 @@ export interface RegisteredPost {
 }
 
 export const POSTS: RegisteredPost[] = [
+  { meta: cyclingTrainingForParentsWithLimitedTimePost.meta, Content: cyclingTrainingForParentsWithLimitedTimePost.default },
+  { meta: howToTrainWhenYourScheduleChangesEveryWeekPost.meta, Content: howToTrainWhenYourScheduleChangesEveryWeekPost.default },
+  { meta: shouldITrainWhenMyLegsStillFeelHeavyPost.meta, Content: shouldITrainWhenMyLegsStillFeelHeavyPost.default },
   { meta: welcomeToTheSmartertrainingBlogPost.meta, Content: welcomeToTheSmartertrainingBlogPost.default },
   { meta: whyAmIExhaustedAfterZone2RidesPost.meta, Content: whyAmIExhaustedAfterZone2RidesPost.default },
+  { meta: whyConsistencyBeatsPerfectTrainingWeeksPost.meta, Content: whyConsistencyBeatsPerfectTrainingWeeksPost.default },
+  { meta: whyRecoveryRecommendationsMatterMoreThanPerfectWorkoutsPost.meta, Content: whyRecoveryRecommendationsMatterMoreThanPerfectWorkoutsPost.default },
   { meta: whyStaticCyclingPlansFailBusyAthletesPost.meta, Content: whyStaticCyclingPlansFailBusyAthletesPost.default },
 ]

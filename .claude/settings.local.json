@@ -45,7 +45,21 @@
       "Bash(pnpm blog:audit --slug why-static-cycling-plans-fail-busy-athletes)",
       "Bash(curl -fsS http://localhost:3000/blog/why-static-cycling-plans-fail-busy-athletes -o /tmp/p1b.html)",
       "Bash(grep -oE \"does <em>not</em>[^<]{0,15}\" /tmp/p1b.html)",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(pnpm blog:links why-recovery-recommendations-matter-more-than-perfect-workouts)",
+      "Bash(pnpm blog:links how-to-train-when-your-schedule-changes-every-week)",
+      "Bash(pnpm blog:audit why-recovery-recommendations-matter-more-than-perfect-workouts)",
+      "Bash(pnpm blog:audit how-to-train-when-your-schedule-changes-every-week)",
+      "Bash(pnpm blog:new \"Why consistency beats perfect training weeks\" --category training-philosophy --tags \"consistency,training philosophy,sustainable training,real-life training\")",
+      "Bash(pnpm blog:new \"Should I train when my legs still feel heavy?\" --category recovery-fatigue --tags \"heavy legs,recovery,fatigue,training decisions\")",
+      "Bash(pnpm blog:new \"Cycling training for parents with limited time\" --category time-crunched-cycling --tags \"parents,time-crunched,schedule,balance\")",
+      "Bash(pnpm blog:links why-consistency-beats-perfect-training-weeks)",
+      "Bash(pnpm blog:links should-i-train-when-my-legs-still-feel-heavy)",
+      "Bash(pnpm blog:links cycling-training-for-parents-with-limited-time)",
+      "Bash(pnpm blog:audit why-consistency-beats-perfect-training-weeks)",
+      "Bash(pnpm blog:audit should-i-train-when-my-legs-still-feel-heavy)",
+      "Bash(pnpm blog:audit cycling-training-for-parents-with-limited-time)",
+      "Bash(curl -fsS -o /tmp/p.html http://localhost:3000/blog/__TRACKED_VAR__)"
     ]
   }
 }
