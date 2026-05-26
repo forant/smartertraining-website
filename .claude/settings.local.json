@@ -16,7 +16,26 @@
       "Bash(curl -s -o /dev/null http://localhost:3000)",
       "Bash(break)",
       "Bash(ls -la ~/Downloads/screenshots/)",
-      "Read(//Users/timforan/Downloads/screenshots/**)"
+      "Read(//Users/timforan/Downloads/screenshots/**)",
+      "Bash(npx tsc *)",
+      "Bash(curl -fsS -o /dev/null http://localhost:3000/blog)",
+      "Bash(curl -fsS http://localhost:3000/blog -o /tmp/blog-index.html)",
+      "Bash(curl -fsS http://localhost:3000/blog/welcome-to-the-smartertraining-blog -o /tmp/blog-post.html)",
+      "Bash(curl -fsS http://localhost:3000/blog/category/adaptive-training -o /tmp/blog-cat.html)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -fsS http://localhost:3000/sitemap.xml)",
+      "Bash(kill %1)",
+      "Bash(pnpm blog:new \"Why static cycling plans fail busy athletes\" --category training-philosophy --tags \"static plans,training philosophy,adaptive training,time-crunched,consistency\")",
+      "Bash(node_modules/.bin/tsx --version)",
+      "Bash(pnpm config *)",
+      "Bash(pnpm blog:links why-static-cycling-plans-fail-busy-athletes)",
+      "Bash(pnpm blog:audit why-static-cycling-plans-fail-busy-athletes)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(pnpm blog:audit)",
+      "Bash(curl -fsS http://localhost:3000/blog/why-static-cycling-plans-fail-busy-athletes -o /tmp/static-post.html)",
+      "Read(//tmp/**)",
+      "Bash(pnpm blog:links why-am-i-exhausted-after-zone-2-rides)",
+      "Bash(pnpm blog:audit why-am-i-exhausted-after-zone-2-rides)"
     ]
   }
 }

@@ -13,6 +13,9 @@ export function Footer() {
             >
               hello@smartertraining.ai
             </a>
+            <a href="/blog" className="hover:text-foreground transition-colors">
+              Blog
+            </a>
             <a href="/support" className="hover:text-foreground transition-colors">
               Support
             </a>
