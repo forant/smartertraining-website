@@ -59,7 +59,15 @@
       "Bash(pnpm blog:audit why-consistency-beats-perfect-training-weeks)",
       "Bash(pnpm blog:audit should-i-train-when-my-legs-still-feel-heavy)",
       "Bash(pnpm blog:audit cycling-training-for-parents-with-limited-time)",
-      "Bash(curl -fsS -o /tmp/p.html http://localhost:3000/blog/__TRACKED_VAR__)"
+      "Bash(curl -fsS -o /tmp/p.html http://localhost:3000/blog/__TRACKED_VAR__)",
+      "Bash(pnpm blog:new \"How to use ERG mode well \\(and when to turn it off\\)\" --category indoor-cycling --tags \"erg mode,smart trainer,indoor cycling,intervals,indoor training\")",
+      "Bash(pnpm blog:new \"AI coaching vs static training plans for cyclists\" --category comparisons --tags \"ai coaching,adaptive training,static plans,training plans,comparisons\")",
+      "Bash(pnpm blog:links how-to-use-erg-mode-well-and-when-to-turn-it-off)",
+      "Bash(pnpm blog:links ai-coaching-vs-static-training-plans-for-cyclists)",
+      "Bash(pnpm blog:audit how-to-use-erg-mode-well-and-when-to-turn-it-off)",
+      "Bash(pnpm blog:audit ai-coaching-vs-static-training-plans-for-cyclists)",
+      "Bash(curl -fsS http://localhost:3000/blog/category/comparisons -o /tmp/h.html)",
+      "Bash(pkill -9 -f \"next dev\")"
     ]
   }
 }

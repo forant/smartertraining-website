@@ -13,8 +13,10 @@
 import type { ComponentType } from 'react'
 import type { PostMeta } from '@/lib/blog/types'
 
+import * as aiCoachingVsStaticTrainingPlansForCyclistsPost from './ai-coaching-vs-static-training-plans-for-cyclists'
 import * as cyclingTrainingForParentsWithLimitedTimePost from './cycling-training-for-parents-with-limited-time'
 import * as howToTrainWhenYourScheduleChangesEveryWeekPost from './how-to-train-when-your-schedule-changes-every-week'
+import * as howToUseErgModeWellAndWhenToTurnItOffPost from './how-to-use-erg-mode-well-and-when-to-turn-it-off'
 import * as shouldITrainWhenMyLegsStillFeelHeavyPost from './should-i-train-when-my-legs-still-feel-heavy'
 import * as welcomeToTheSmartertrainingBlogPost from './welcome-to-the-smartertraining-blog'
 import * as whyAmIExhaustedAfterZone2RidesPost from './why-am-i-exhausted-after-zone-2-rides'
@@ -28,8 +30,10 @@ export interface RegisteredPost {
 }
 
 export const POSTS: RegisteredPost[] = [
+  { meta: aiCoachingVsStaticTrainingPlansForCyclistsPost.meta, Content: aiCoachingVsStaticTrainingPlansForCyclistsPost.default },
   { meta: cyclingTrainingForParentsWithLimitedTimePost.meta, Content: cyclingTrainingForParentsWithLimitedTimePost.default },
   { meta: howToTrainWhenYourScheduleChangesEveryWeekPost.meta, Content: howToTrainWhenYourScheduleChangesEveryWeekPost.default },
+  { meta: howToUseErgModeWellAndWhenToTurnItOffPost.meta, Content: howToUseErgModeWellAndWhenToTurnItOffPost.default },
   { meta: shouldITrainWhenMyLegsStillFeelHeavyPost.meta, Content: shouldITrainWhenMyLegsStillFeelHeavyPost.default },
   { meta: welcomeToTheSmartertrainingBlogPost.meta, Content: welcomeToTheSmartertrainingBlogPost.default },
   { meta: whyAmIExhaustedAfterZone2RidesPost.meta, Content: whyAmIExhaustedAfterZone2RidesPost.default },
