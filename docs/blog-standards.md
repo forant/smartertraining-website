@@ -209,14 +209,41 @@ Good:
 - “Why Zone 2 can still create fatigue”
 - “What busy cyclists usually get wrong”
 - “How recovery changes after 35”
+- “Why static training plans frustrate busy cyclists”
+- “How adaptive cycling training adjusts to real life”
 
 Bad:
 - “Understanding the science”
 - “Important considerations”
 - “Maximizing results”
 - “Final thoughts”
+- “Why this matters”
 
 Prefer clarity over cleverness.
+
+Headings should be specific enough that a search result, snippet, or LLM summary that lifts just the heading still tells a reader what the section is about. A generic label like “Why this matters” is a missed opportunity — when a clearer topic-specific heading is available, use it.
+
+---
+
+# Template Labels & Infrastructure Tone
+
+Avoid visible template labels and infrastructure-aware phrasing.
+
+Do not use labels like:
+- “Direct answer”
+- “Final thoughts”
+- “Key insights”
+
+unless they genuinely improve readability.
+
+Internal links and category references should feel naturally embedded in the editorial flow, not inserted to satisfy site structure.
+
+Prefer:
+- a short topical label (“In short”, “The short version”) over a generic “Direct answer” banner
+- a closing paragraph that lands the point over a heading called “Final thoughts”
+- inline links that grow out of a sentence over a “See also:” block tacked on at the end
+
+The article should read like writing, not like a CMS template.
 
 ---
 
@@ -310,9 +337,9 @@ Avoid:
 
 ---
 
-# Comparison Article Standards
+# Comparison & Critique Standards
 
-Comparison pages should be:
+Comparison pages — and any article that argues against a common approach (static plans, generic intervals, off-the-shelf zones, etc.) — should be:
 - fair
 - nuanced
 - useful
@@ -321,8 +348,9 @@ Do not:
 - attack competitors
 - use fake objectivity
 - overstate differences
+- frame the criticized approach as worthless
 
-Acknowledge where competitors are good.
+Acknowledge where competitors are good. Acknowledge when the criticized approach **still works** — explicitly, early, and without sneering. A static plan is fine for an athlete with a stable schedule. A generic interval set is fine for a rider who needs structure more than personalization. The article is about a *mismatch*, not a *flaw in the approach itself*. Make that distinction in the opening section, not buried near the end.
 
 The differentiator should consistently come back to:
 - adaptive flexibility
@@ -330,6 +358,40 @@ The differentiator should consistently come back to:
 - recovery-aware recommendations
 - sustainability
 - time-crunched athletes
+
+---
+
+# Concrete Cycling Detail Standards
+
+Training claims should land with concrete, cycling-specific examples wherever the topic allows. Abstractions ("plans break when life happens") are setup; specifics ("a 5x4 at VO2 done flat ends as 15–20 watts below target with heart rate pinned and no real stimulus") are payoff. A good blog post has at least two or three of these per article.
+
+Use, where it fits:
+- specific interval shapes (5x4 VO2, 2x20 sweet spot, 3x10 threshold, etc.)
+- power/heart-rate language (zones, FTP percentages, drift, decoupling)
+- concrete schedule shapes (Tuesday sweet spot, Saturday long ride)
+- recovery cost in days, not adjectives ("two extra days flat", not "really tired")
+- specific physiological consequences when known ("no real VO2 stimulus", "survival work", "poor power quality"), without overclaiming the underlying mechanism
+
+Do not:
+- invent numbers
+- imply false precision (no "studies show 17.4%")
+- gatekeep with elite-only vocabulary the audience would not recognize
+- substitute jargon for clarity
+
+A specific example beats a confident abstraction every time. If the article never names a specific workout, power range, or schedule shape, it probably reads like generic fitness content.
+
+---
+
+# Pre-Publish Discipline
+
+Every article ships with the same minimum checks:
+
+1. **Run `pnpm blog:audit <slug>`.** Fix every ERROR and every WARN that is not a deliberate, documented choice (e.g. the thin-content warning on an intentionally short announcement post).
+2. **Run `pnpm build`.** A passing audit does not guarantee a passing build — JSX whitespace bugs, broken anchors, and TOC↔heading drift only surface at build/render time.
+3. **Read the rendered page in dev.** Look specifically for: visible labels you did not intend ("Direct answer"), missing spaces around inline `<em>` / `<Link>` elements, anchor links that 404, and the answer-box paragraph showing as the lead instead of a callout.
+4. **Read the article aloud.** Spaces eaten by JSX whitespace collapsing, awkward sentences, and template tone all surface fastest when you read it.
+
+Small copy/paste/spacing errors are the most common cause of "this article shipped looking wrong." Treat the audit + build pair as the publish gate; do not skip it because the diff "looks small."
 
 ---
 

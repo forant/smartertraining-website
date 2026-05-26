@@ -35,7 +35,17 @@
       "Bash(curl -fsS http://localhost:3000/blog/why-static-cycling-plans-fail-busy-athletes -o /tmp/static-post.html)",
       "Read(//tmp/**)",
       "Bash(pnpm blog:links why-am-i-exhausted-after-zone-2-rides)",
-      "Bash(pnpm blog:audit why-am-i-exhausted-after-zone-2-rides)"
+      "Bash(pnpm blog:audit why-am-i-exhausted-after-zone-2-rides)",
+      "Bash(pnpm blog:new \"When ERG mode is the wrong choice\" --category indoor-cycling --tags \"erg,smart trainer\" --dry-run)",
+      "Bash(pnpm blog:new \"How to ramp ERG mode workouts after a layoff\" --category indoor-cycling --dry-run)",
+      "Bash(curl -fsS http://localhost:3000/blog/why-static-cycling-plans-fail-busy-athletes -o /tmp/p1.html)",
+      "Bash(curl -fsS http://localhost:3000/blog/why-am-i-exhausted-after-zone-2-rides -o /tmp/p2.html)",
+      "Bash(grep -oE '<div class=\"answer-box\"[^>]*>[^<]*<p[^>]*>[^<]{0,80}' /tmp/p1.html)",
+      "Bash(grep -oE '<div class=\"answer-box\"[^>]*>[^<]*<p[^>]*>[^<]{0,80}' /tmp/p2.html)",
+      "Bash(pnpm blog:audit --slug why-static-cycling-plans-fail-busy-athletes)",
+      "Bash(curl -fsS http://localhost:3000/blog/why-static-cycling-plans-fail-busy-athletes -o /tmp/p1b.html)",
+      "Bash(grep -oE \"does <em>not</em>[^<]{0,15}\" /tmp/p1b.html)",
+      "Bash(git mv *)"
     ]
   }
 }

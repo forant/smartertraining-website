@@ -194,12 +194,19 @@ export default function Content() {
         plain language. Avoid generic openers.
       </p>
 
-      <div className="answer-box" role="note" aria-label="Direct answer">
-        <p className="answer-box__label">Direct answer</p>
+      {/*
+       * Direct-answer box. LLM search summaries and snippets will extract this.
+       * Per docs/blog-standards.md § Template Labels & Infrastructure Tone,
+       * avoid generic visible labels ("Direct answer", "Key takeaway"). If a
+       * short topical label genuinely helps scanning, add a
+       * <p className="answer-box__label">In short</p> (or similar) above the
+       * paragraph. Otherwise leave the box label-free.
+       */}
+      <div className="answer-box" role="note" aria-label="Key answer">
         <p>
-          TODO: in 2–4 sentences, directly answer the question implied by the
-          title. This is the section LLMs and search snippets will lift —
-          make it concrete and self-contained.
+          TODO: 2–4 sentences that directly answer the question implied by
+          the title. Concrete and self-contained — this paragraph will get
+          lifted into AI search summaries and snippets.
         </p>
       </div>
 
@@ -285,9 +292,19 @@ function main() {
   )
   console.log()
   console.log('Next steps:')
-  console.log(`  1. Open ${path.relative('.', filePath)} and replace every TODO.`)
-  console.log(`  2. pnpm blog:links ${slug}   # internal-link suggestions`)
-  console.log(`  3. pnpm blog:audit ${slug}   # validate before commit`)
+  console.log(
+    `  1. Read docs/blog-standards.md (voice, banned phrases, structure).`
+  )
+  console.log(
+    `  2. Open ${path.relative('.', filePath)} and replace every TODO.`
+  )
+  console.log(`  3. pnpm blog:links ${slug}   # internal-link suggestions`)
+  console.log(`  4. pnpm blog:audit ${slug}   # validate before commit`)
+  console.log()
+  console.log(
+    'Authoring with an LLM? Paste docs/blog-standards.md + prompts/blog-writer.md'
+  )
+  console.log('into the session along with the scaffold above.')
 }
 
 main()

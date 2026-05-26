@@ -71,7 +71,11 @@ export const meta: PostMeta = {
 }
 
 const TOC: TocItem[] = [
-  { id: 'why-this-matters', title: 'Why this matters', level: 2 },
+  {
+    id: 'why-exhausting-zone-2-rides-break-base-building',
+    title: 'Why exhausting zone 2 rides break aerobic base building',
+    level: 2,
+  },
   {
     id: 'the-five-common-causes',
     title: 'The five most common causes',
@@ -98,8 +102,7 @@ export default function Content() {
         doing it.
       </p>
 
-      <div className="answer-box" role="note" aria-label="Direct answer">
-        <p className="answer-box__label">Direct answer</p>
+      <div className="answer-box" role="note" aria-label="What's actually happening">
         <p>
           The two most common reasons you are exhausted after zone 2 are
           that you are not actually riding zone 2 — power and heart rate
@@ -111,7 +114,9 @@ export default function Content() {
         </p>
       </div>
 
-      <h2 id="why-this-matters">Why this matters</h2>
+      <h2 id="why-exhausting-zone-2-rides-break-base-building">
+        Why exhausting zone 2 rides break aerobic base building
+      </h2>
       <p>
         Zone 2 only works as the backbone of an aerobic base if you can do
         it often. A zone 2 ride that wrecks you is a contradiction in

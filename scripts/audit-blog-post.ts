@@ -19,9 +19,32 @@ interface Issue {
   message: string
 }
 
-/* Phrases that scream generic SEO/AI filler. Lowercase substring match. */
+/*
+ * Banned / discouraged phrases.
+ *
+ * Source of truth: docs/blog-standards.md § "Banned / Discouraged Phrases".
+ * Keep this list in sync with that section. Multi-word phrases go in
+ * WEAK_PHRASES (lowercase substring match); single words / short tokens that
+ * have legitimate uses elsewhere go in OVERCLAIM_WORDS (word-boundary match
+ * so "hack" doesn't fire on "backpack").
+ */
 const WEAK_PHRASES = [
+  // Standards doc: Banned / Discouraged Phrases
   "in today's fast-paced world",
+  'unlock your potential',
+  'game changer',
+  'game-changer',
+  'take your training to the next level',
+  'crush your goals',
+  'optimize every aspect',
+  'studies show',
+  'science-backed',
+  'elite performance secrets',
+  'no excuses',
+  'train harder',
+  'maximum gains',
+  'revolutionary ai',
+  // Generic AI/SEO filler — not in the doc by name but in the same family.
   "in today's world",
   'in the world of',
   'without further ado',
@@ -35,10 +58,7 @@ const WEAK_PHRASES = [
   'delve into',
   'when it comes to',
   'unleash your potential',
-  'game changer',
-  'game-changer',
-  // unsubstantiated science
-  'studies show',
+  // Unsubstantiated science (Brand Voice + Medical & Safety Standards).
   'research has proven',
   'experts agree',
   'scientifically proven',
@@ -46,8 +66,18 @@ const WEAK_PHRASES = [
   'proven to',
 ]
 
-/* Words that flag possible product overclaim (word-boundary match). */
+/*
+ * Single-word overclaim/hype tokens. Word-boundary match.
+ *
+ * Source of truth: docs/blog-standards.md § "Banned / Discouraged Phrases" +
+ * § "SmarterTraining Mentions" (never oversell).
+ */
 const OVERCLAIM_WORDS = [
+  // Standards doc.
+  'hack',
+  'biohack',
+  'dominate',
+  // Mention/overclaim family (general blog guardrails).
   'guaranteed',
   'instantly',
   'effortlessly',
@@ -68,7 +98,23 @@ const MEDICAL_PHRASES = [
   'replace your doctor',
 ]
 
+/*
+ * Heading text we consider template-y / vague.
+ *
+ * Source of truth: docs/blog-standards.md § "Heading Standards" (bad examples)
+ * and § "Template Labels & Infrastructure Tone".
+ */
 const VAGUE_HEADINGS = new Set([
+  // Standards doc § Heading Standards (bad examples).
+  'understanding the science',
+  'important considerations',
+  'maximizing results',
+  'final thoughts',
+  'why this matters',
+  // Standards doc § Template Labels & Infrastructure Tone.
+  'key insights',
+  'key takeaways',
+  // Common AI/SEO template headings.
   'introduction',
   'overview',
   'background',
@@ -76,6 +122,7 @@ const VAGUE_HEADINGS = new Set([
   'summary',
   'main section',
   'the basics',
+  'closing thoughts',
 ])
 
 function isQuestionTitle(title: string): boolean {
