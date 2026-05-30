@@ -1,18 +1,18 @@
 // Entity (Smarter Foundry LLC), governing law (California), and contact
 // addresses are confirmed current.
-import { Footer } from '@/components/landing/footer'
+import { Footer } from "@/components/landing/footer";
 
 export const metadata = {
-  title: 'Privacy Policy | SmarterTraining',
-  description: 'Privacy Policy for SmarterTraining',
-}
+  title: "Privacy Policy | SmarterTraining",
+  description: "Privacy Policy for SmarterTraining",
+};
 
 function Section({
   title,
   children,
 }: {
-  title: string
-  children: React.ReactNode
+  title: string;
+  children: React.ReactNode;
 }) {
   return (
     <section className="mt-10">
@@ -21,30 +21,30 @@ function Section({
         {children}
       </div>
     </section>
-  )
+  );
 }
 
 function SubSection({
   title,
   children,
 }: {
-  title: string
-  children: React.ReactNode
+  title: string;
+  children: React.ReactNode;
 }) {
   return (
     <div className="mt-6">
       <h3 className="text-base font-medium">{title}</h3>
       <div className="mt-2 space-y-3">{children}</div>
     </div>
-  )
+  );
 }
 
 function BulletList({ children }: { children: React.ReactNode }) {
-  return <ul className="list-disc pl-5 space-y-1">{children}</ul>
+  return <ul className="list-disc pl-5 space-y-1">{children}</ul>;
 }
 
 function Strong({ children }: { children: React.ReactNode }) {
-  return <strong className="font-medium text-gray-900">{children}</strong>
+  return <strong className="font-medium text-gray-900">{children}</strong>;
 }
 
 function PrivacyEmail() {
@@ -55,7 +55,7 @@ function PrivacyEmail() {
     >
       privacy@smartertraining.ai
     </a>
-  )
+  );
 }
 
 export default function PrivacyPage() {
@@ -67,21 +67,21 @@ export default function PrivacyPage() {
             Privacy Policy for SmarterTraining
           </h1>
           <p className="mt-3 text-sm text-gray-500">
-            Effective Date: May 20, 2026
+            Effective Date: May 30, 2026
           </p>
 
           <div className="mt-8 text-sm leading-relaxed text-gray-700 space-y-4">
             <p>
-              SmarterTraining is operated by <Strong>Smarter Foundry LLC</Strong>{' '}
-              (“SmarterTraining,” “we,” “our,” or “us”), a California limited
-              liability company. This Privacy Policy explains how we collect,
-              use, share, and protect your information when you use the
-              SmarterTraining mobile application (the “App”) and website
-              (collectively, the “Service”).
+              SmarterTraining is operated by{" "}
+              <Strong>Smarter Foundry LLC</Strong> (“SmarterTraining,” “we,”
+              “our,” or “us”), a California limited liability company. This
+              Privacy Policy explains how we collect, use, share, and protect
+              your information when you use the SmarterTraining mobile
+              application (the “App”) and website (collectively, the “Service”).
             </p>
             <p>
-              By using the Service, you agree to the practices described in
-              this Privacy Policy.
+              By using the Service, you agree to the practices described in this
+              Privacy Policy.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
                   activities you log.
                 </li>
                 <li>
-                  <Strong>Workouts you complete, skip, modify, or log.</Strong>{' '}
+                  <Strong>Workouts you complete, skip, modify, or log.</Strong>{" "}
                   Including title, duration, type, subtype, structure, and your
                   feedback.
                 </li>
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
                 With your permission, the Service may access health and fitness
                 data — such as workouts, heart rate, power, cadence, and
                 activity history — from <Strong>Apple HealthKit</Strong>,
-                connected <Strong>Bluetooth heart-rate monitors</Strong>, and{' '}
+                connected <Strong>Bluetooth heart-rate monitors</Strong>, and{" "}
                 <Strong>Bluetooth indoor trainers</Strong> (FTMS).
               </p>
               <p>Specifically:</p>
@@ -163,9 +163,9 @@ export default function PrivacyPage() {
               </BulletList>
               <p>
                 When you complete a workout, the recorded workout data —
-                including heart rate, power, cadence, duration, and any
-                feedback or reflection you provide — is transmitted to our
-                backend so we can:
+                including heart rate, power, cadence, duration, and any feedback
+                or reflection you provide — is transmitted to our backend so we
+                can:
               </p>
               <BulletList>
                 <li>Sync your training history across your devices,</li>
@@ -176,8 +176,8 @@ export default function PrivacyPage() {
                 </li>
               </BulletList>
               <p className="font-medium text-gray-900">
-                HealthKit-sourced data is used solely to provide and improve
-                the Service. We never use HealthKit data for advertising, never
+                HealthKit-sourced data is used solely to provide and improve the
+                Service. We never use HealthKit data for advertising, never
                 share it with advertisers, never sell it, and never share it
                 with third parties for marketing purposes.
               </p>
@@ -195,9 +195,8 @@ export default function PrivacyPage() {
                   system version, app version, locale).
                 </li>
                 <li>
-                  <Strong>Usage data</Strong> (which features you interact
-                  with, how often, and session-level metadata such as
-                  duration).
+                  <Strong>Usage data</Strong> (which features you interact with,
+                  how often, and session-level metadata such as duration).
                 </li>
                 <li>
                   <Strong>Diagnostic data</Strong> (crash reports, error logs,
@@ -205,10 +204,9 @@ export default function PrivacyPage() {
                 </li>
               </BulletList>
               <p>
-                Once you sign in with Apple, this information is associated
-                with your account. Before sign-in, this information is
-                associated with a temporary pseudonymous identifier on your
-                device.
+                Once you sign in with Apple, this information is associated with
+                your account. Before sign-in, this information is associated
+                with a temporary pseudonymous identifier on your device.
               </p>
             </SubSection>
 
@@ -222,8 +220,7 @@ export default function PrivacyPage() {
                 <li>Advertising identifiers (IDFA).</li>
                 <li>Browsing history outside the Service.</li>
                 <li>
-                  Payment information (handled exclusively by Apple’s
-                  StoreKit).
+                  Payment information (handled exclusively by Apple’s StoreKit).
                 </li>
               </BulletList>
             </SubSection>
@@ -249,7 +246,9 @@ export default function PrivacyPage() {
                 Personalize your coaching experience based on your goals,
                 training approach, and history.
               </li>
-              <li>Sync your data across your devices when you are signed in.</li>
+              <li>
+                Sync your data across your devices when you are signed in.
+              </li>
               <li>
                 Analyze usage to improve features, performance, and
                 recommendation quality.
@@ -330,13 +329,15 @@ export default function PrivacyPage() {
                       <Strong>OpenAI, L.L.C.</Strong>
                     </td>
                     <td className="px-3 py-2">
-                      AI generation of post-workout reflections and “why this”
-                      coaching explanations
+                      AI-generated coaching explanations and post-workout
+                      reflections
                     </td>
                     <td className="px-3 py-2">
-                      Workout context (subtype, duration, recent feedback,
-                      memory summary); your Apple user identifier is forwarded
-                      as an opaque ID
+                      Check-in answers, workout history, training preferences,
+                      workout context, and related coaching context. We do not
+                      send your name, email address, Apple ID, or payment
+                      information. Data is only sent after you explicitly choose
+                      to enable AI Coaching Assistance in the App.
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -354,7 +355,9 @@ export default function PrivacyPage() {
                   </tr>
                   <tr>
                     <td className="px-3 py-2">
-                      <Strong>Smarter Foundry LLC’s own backend infrastructure</Strong>
+                      <Strong>
+                        Smarter Foundry LLC’s own backend infrastructure
+                      </Strong>
                     </td>
                     <td className="px-3 py-2">
                       Sync, AI orchestration, account management
@@ -367,6 +370,14 @@ export default function PrivacyPage() {
                 </tbody>
               </table>
             </div>
+            <p>
+              AI Coaching Assistance is optional. Before any training or
+              coaching context is shared with OpenAI, SmarterTraining presents
+              an in-app disclosure explaining what data may be shared, who
+              receives it, and why it is used. You may decline or disable AI
+              Coaching Assistance at any time in Settings, and the App will
+              continue functioning with deterministic coaching guidance.
+            </p>
             <p>
               These providers operate in the <Strong>United States</Strong> and
               may store or process data in other jurisdictions where their
@@ -383,20 +394,33 @@ export default function PrivacyPage() {
 
           <Section title="4. AI Processing Notice">
             <p>
-              Some Service features rely on third-party AI providers (currently
-              OpenAI) to generate personalized coaching content. When you
-              complete a workout or check in, anonymized workout context — such
-              as workout type, recent training history, your feedback, and
-              (where relevant) free-form notes you have written — is sent to
-              OpenAI to generate reflection and recommendation text.
+              Some Service features can use third-party AI providers (currently
+              OpenAI) to generate personalized coaching explanations,
+              post-workout reflections, and training guidance. Before any user
+              training or coaching context is sent to OpenAI, the App asks for
+              your permission through an in-app AI Coaching Assistance
+              disclosure.
             </p>
             <p>
-              Under OpenAI’s API data usage policies, API data submitted
-              through the API is not used to train OpenAI models.
+              If you choose to enable AI Coaching Assistance, we may send your
+              check-in answers, workout history, training preferences, workout
+              context, and related coaching context to OpenAI. This information
+              is used only to generate your coaching experience in
+              SmarterTraining.
             </p>
             <p>
-              We do not send your real name, email address, or contact
-              information to OpenAI.
+              We do not send your name, email address, Apple ID, payment
+              information, or Apple Health account credentials to OpenAI.
+            </p>
+            <p>
+              AI Coaching Assistance is optional. If you decline or disable it
+              in Settings, the App does not send your user-derived coaching
+              context to OpenAI and continues to function with deterministic
+              coaching guidance.
+            </p>
+            <p>
+              Under OpenAI’s API data usage policies, API data submitted through
+              the API is not used to train OpenAI models.
             </p>
           </Section>
 
@@ -404,10 +428,10 @@ export default function PrivacyPage() {
             <p>
               SmarterTraining does <Strong>not</Strong> sell your personal
               information or your health and fitness data within the meaning of
-              the California Consumer Privacy Act (CCPA / CPRA). We also do
-              not share your data with advertisers, do not participate in
-              cross-context behavioral advertising, and do not allow
-              third-party advertising SDKs in the App.
+              the California Consumer Privacy Act (CCPA / CPRA). We also do not
+              share your data with advertisers, do not participate in
+              cross-context behavioral advertising, and do not allow third-party
+              advertising SDKs in the App.
             </p>
           </Section>
 
@@ -472,6 +496,12 @@ export default function PrivacyPage() {
                   <Strong>Disconnect Strava.</Strong> You can disconnect Strava
                   in the App at any time; this stops future uploads.
                 </li>
+                <li>
+                  <Strong>AI Coaching Assistance.</Strong> You can decline AI
+                  Coaching Assistance or turn it off later in Settings. When it
+                  is off, we do not send your user-derived coaching context to
+                  OpenAI.
+                </li>
               </BulletList>
             </SubSection>
 
@@ -499,7 +529,7 @@ export default function PrivacyPage() {
                   advertising.
                 </li>
                 <li>
-                  <Strong>Limit use of sensitive personal information.</Strong>{' '}
+                  <Strong>Limit use of sensitive personal information.</Strong>{" "}
                   Health and fitness data is sensitive personal information
                   under CPRA; we only use it to provide the Service.
                 </li>
@@ -509,7 +539,7 @@ export default function PrivacyPage() {
                 </li>
               </BulletList>
               <p>
-                To exercise any of these rights, email{' '}
+                To exercise any of these rights, email{" "}
                 <Strong>
                   <PrivacyEmail />
                 </Strong>
@@ -561,15 +591,15 @@ export default function PrivacyPage() {
                   preventing abuse).
                 </li>
                 <li>
-                  <Strong>Consent</Strong> (HealthKit, Bluetooth access,
-                  marketing emails if applicable).
+                  <Strong>Consent</Strong> (HealthKit, Bluetooth access, AI
+                  Coaching Assistance, marketing emails if applicable).
                 </li>
                 <li>
                   <Strong>Legal obligation</Strong> (tax, regulatory).
                 </li>
               </BulletList>
               <p>
-                To exercise any of these rights, email{' '}
+                To exercise any of these rights, email{" "}
                 <Strong>
                   <PrivacyEmail />
                 </Strong>
@@ -579,11 +609,11 @@ export default function PrivacyPage() {
 
             <SubSection title="International Data Transfers">
               <p>
-                Because our service providers operate in the United States,
-                your data may be transferred outside your country. Where
-                required by law (for example, for transfers from the EU), we
-                rely on <Strong>Standard Contractual Clauses</Strong> or other
-                approved transfer mechanisms.
+                Because our service providers operate in the United States, your
+                data may be transferred outside your country. Where required by
+                law (for example, for transfers from the EU), we rely on{" "}
+                <Strong>Standard Contractual Clauses</Strong> or other approved
+                transfer mechanisms.
               </p>
             </SubSection>
           </Section>
@@ -593,8 +623,8 @@ export default function PrivacyPage() {
               The Service is not intended for children under the age of 13 (or
               under 16 in the EU/UK, where stricter consent rules apply). We do
               not knowingly collect personal information from children. If you
-              believe a child has provided us with personal information,
-              contact <PrivacyEmail /> and we will delete it.
+              believe a child has provided us with personal information, contact{" "}
+              <PrivacyEmail /> and we will delete it.
             </p>
           </Section>
 
@@ -609,13 +639,13 @@ export default function PrivacyPage() {
                 page.
               </li>
               <li>
-                Notify you in the App and/or by email (if you have provided
-                one) at least 7 days before the changes take effect.
+                Notify you in the App and/or by email (if you have provided one)
+                at least 7 days before the changes take effect.
               </li>
             </BulletList>
             <p>
-              Continued use of the Service after changes take effect
-              constitutes acceptance of the updated Privacy Policy.
+              Continued use of the Service after changes take effect constitutes
+              acceptance of the updated Privacy Policy.
             </p>
           </Section>
 
@@ -639,8 +669,8 @@ export default function PrivacyPage() {
             <p>
               SmarterTraining provides informational training guidance, workout
               planning, and adaptive recommendations only. The Service is not a
-              medical service and does not provide medical advice, diagnosis,
-              or treatment.
+              medical service and does not provide medical advice, diagnosis, or
+              treatment.
             </p>
             <p>
               You should consult a qualified healthcare professional before
@@ -654,5 +684,5 @@ export default function PrivacyPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
